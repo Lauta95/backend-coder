@@ -1,6 +1,9 @@
 class ProductManager {
+    static contadorID = 1;
+
     constructor() {
         this.products = [];
+        this.id = ProductManager.contadorID++;
     }
 
     addProduct = (title, description, price, thumbnail, code, stock) => {
@@ -10,7 +13,8 @@ class ProductManager {
             price,
             thumbnail,
             code,
-            stock
+            stock,
+            id
         }
         if (!title || !description || !price || !thumbnail || !code || !stock) {
             console.log('Error: todos los campos son obligatorios');
@@ -28,5 +32,6 @@ class ProductManager {
 }
 
 const producto = new ProductManager()
-producto.addProduct('titulo: asd', 'description: dsa', 'precio', 'thumbnail', 'code', 'asdsa')
-// console.log(producto.title);
+producto.addProduct('titulo', 'description: dsa', 'precio', 'thumbnail', 'code', 'numeroDeStock')
+console.log(producto.id);
+getProducts();
