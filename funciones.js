@@ -36,10 +36,19 @@ class ProductManager {
 
     getProducts = () => { return this.products }
 
+    getProductById = () => {
+        const product = this.products.find((product) => product.id === id);
+        if(product){
+            console.log(`producto encontrado: ${product}`);
+        } else {
+            console.log('no se encontró el producto con ese id');
+        }
+    }
+
 }
 
 const producto = new ProductManager();
-producto.addProduct('titulo', 'description: dsa', 423, 'dsaf', 14, 40)
+producto.addProduct('titulo', 'description: dsa', 423, 'dsaf', 15, 40)
 producto.addProduct('titulo2', 'description: otra', 200, 'thumbnail', 14, 20,)
 console.log(producto.getProducts());
 
