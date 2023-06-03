@@ -12,6 +12,12 @@ class ProductManager {
 
     addProduct = (title, description, price, thumbnail, code, stock) => {
 
+        const yaExisteCode = this.products.find((product) => product.code === code);
+        if(yaExisteCode){
+            console.log('ERROR: se repite el campo CODE');
+            return;
+        }
+
         const agregar = {
             id: this.getNextId(),
             title,
@@ -34,6 +40,6 @@ class ProductManager {
 
 const producto = new ProductManager();
 producto.addProduct('titulo', 'description: dsa', 423, 'dsaf', 14, 40)
-producto.addProduct('titulo2', 'description: otra', 200, 'thumbnail', 23, 20,)
+producto.addProduct('titulo2', 'description: otra', 200, 'thumbnail', 14, 20,)
 console.log(producto.getProducts());
 
