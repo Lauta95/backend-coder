@@ -28,7 +28,7 @@ class ProductManager {
             code,
             stock,
         }
-        const obligatorios = (!(title || description || price || thumbnail || code || stock)) ? console.log('Error: todos los campos son obligatorios') : this.products.push(agregar);
+        const obligatorios = (!(title && description && price && thumbnail && code && stock)) ? console.log('Error: todos los campos son obligatorios') : this.products.push(agregar);
         return obligatorios;
     }
 
