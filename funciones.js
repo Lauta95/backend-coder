@@ -6,7 +6,7 @@ class ProductManager {
 
     getNextId = () => {
         const count = this.products.length;
-        const nextId = (count > 0) ? this.events[count - 1].id + 1 : 1;
+        const nextId = (count > 0) ? this.products[count - 1].id + 1 : 1
         return nextId;
     }
 
@@ -32,10 +32,8 @@ class ProductManager {
 
 }
 
-const producto = new ProductManager()
-producto.addProduct('titulo', 'description: dsa', 'precio', 'thumbnail', 'code', 40)
+const producto = new ProductManager();
+producto.addProduct('titulo', 'description: dsa', 423, 'dsaf', 14, 40)
+producto.addProduct('titulo2', 'description: otra', 200, 'thumbnail', 23, 20,)
 console.log(producto.getProducts());
 
-const producto2 = new ProductManager()
-producto2.addProduct('titulo2', 'description: dsa', 'dsawe', 'thumbnail', 23, 20,)
-console.log(producto2.getProducts());
