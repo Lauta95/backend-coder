@@ -28,7 +28,7 @@ class ProductManager {
             code,
             stock,
         }
-        if (!title || !description || !price || !thumbnail || !code || !stock) {
+        if (!(title || description || price || thumbnail || code || stock)) {
             console.log('Error: todos los campos son obligatorios');
         } else {
             this.products.push(agregar);
