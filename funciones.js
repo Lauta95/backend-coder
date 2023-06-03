@@ -1,9 +1,8 @@
 class ProductManager {
-    static contadorID = 1;
 
     constructor() {
         this.products = [];
-        this.id = ProductManager.contadorID++;
+        this.id = 1;
     }
 
     addProduct = (title, description, price, thumbnail, code, stock) => {
