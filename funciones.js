@@ -13,8 +13,9 @@ class ProductManager {
     addProduct = (title, description, price, thumbnail, code, stock) => {
 
         const yaExisteCode = this.products.find((product) => product.code === code);
-        if(yaExisteCode){
+        if (yaExisteCode) {
             console.log('ERROR: se repite el campo CODE');
+            // return early 
             return;
         }
 
@@ -38,18 +39,16 @@ class ProductManager {
 
     getProductById = (id) => {
         const product = this.products.find((product) => product.id === id);
-        if(product){
-            console.log(`producto encontrado: ${JSON.stringify(product)}`);
-        } else {
-            console.log('no se encontró el producto con ese id');
-        }
+        const encontrado = (product) ? console.log(`producto encontrado: ${JSON.stringify(product)}`) : console.log('no se encontró el producto con ese id');
+        return encontrado;
     }
-
 }
+
 
 const producto = new ProductManager();
 producto.addProduct('titulo', 'description: dsa', 423, 'dsaf', 15, 40)
 producto.addProduct('titulo2', 'description: otra', 200, 'thumbnail', 14, 20,)
 console.log(producto.getProducts());
+producto.getProductById(1);
 producto.getProductById(2);
 
