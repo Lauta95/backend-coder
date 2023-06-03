@@ -28,11 +28,8 @@ class ProductManager {
             code,
             stock,
         }
-        if (!(title || description || price || thumbnail || code || stock)) {
-            console.log('Error: todos los campos son obligatorios');
-        } else {
-            this.products.push(agregar);
-        }
+        const obligatorios = (!(title || description || price || thumbnail || code || stock)) ? console.log('Error: todos los campos son obligatorios') : this.products.push(agregar);
+        return obligatorios;
     }
 
     getProducts = () => { return this.products }
