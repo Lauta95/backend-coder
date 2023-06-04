@@ -1,4 +1,5 @@
  
 ## Screenshots  
-![App Screenshot](C:\Users\Lautaro\Desktop\backend-desafio1\img\1preentrega.PNG)
+![App Screenshot](https://github.com/Lauta95/backend-desafio1/blob/main/img/1preentrega.JPG)
+![App Screenshot](https://github.com/Lauta95/backend-desafio1/blob/main/img/2preentrega.JPG)
 
